@@ -489,12 +489,25 @@ If MCP tools are available:
 ```
 mgm_whoami → check if logged in
 ```
-If not logged in, guide them to authenticate:
-```
-mgm_login → sends magic link email, waits for auth
-```
+Authentication is handled automatically by the MCP OAuth flow — the user's browser opens to sign in or create an account before tools become available. If `mgm_whoami` works, you're authenticated.
 
-If no MCP tools, guide them to sign up at https://app.mostlygoodmetrics.com.
+If MCP tools are NOT available, guide the user to set up the MCP connection:
+1. Install the CLI: `npm install -g @mostly-good-metrics/cli`
+2. Create an account: `mgm signup` (opens browser to create account)
+3. Or sign in: `mgm login` (opens browser to log in)
+4. Add the MCP server to their Claude Code settings:
+   ```json
+   {
+     "mcpServers": {
+       "mgm": {
+         "type": "url",
+         "url": "https://api.mostlygoodmetrics.com/mcp"
+       }
+     }
+   }
+   ```
+
+Alternatively, they can sign up directly at https://app.mostlygoodmetrics.com.
 
 ### Step 2: Get or create a project
 
