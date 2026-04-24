@@ -1,0 +1,27 @@
+{
+  "name": "@mostly-good-metrics/skill",
+  "version": "0.1.0",
+  "description": "Claude Code skill for instrumenting apps with MostlyGoodMetrics analytics",
+  "main": "skill.md",
+  "files": [
+    "skill.md",
+    "bin/"
+  ],
+  "bin": {
+    "mostly-good-metrics-skill": "bin/init.js"
+  },
+  "keywords": [
+    "claude-code",
+    "skill",
+    "analytics",
+    "mostlygoodmetrics",
+    "instrumentation"
+  ],
+  "author": "Mostly Good Metrics",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mostly-Good-Metrics/skill.git"
+  },
+  "homepage": "https://github.com/Mostly-Good-Metrics/skill#readme"
+}
